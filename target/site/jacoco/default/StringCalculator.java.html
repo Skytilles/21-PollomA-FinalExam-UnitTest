@@ -2,18 +2,18 @@
     public static int add(final String numbers) {
 <span class="fc" id="L3">        int returnValue = 0;</span>
 <span class="fc" id="L4">        String[] numbersArray = numbers.split(&quot;,|\n&quot;);</span>
-<span class="pc bpc" id="L5" title="1 of 2 branches missed.">        for (String number : numbersArray) {</span>
-<span class="nc bnc" id="L6" title="All 2 branches missed.">            if(Integer.parseInt(numbers.trim()) &lt; 0){</span>
-<span class="nc" id="L7">                throw new IllegalArgumentException(&quot;negatives not allowed&quot;);</span>
+<span class="fc bfc" id="L5" title="All 2 branches covered.">        for (String number : numbersArray) {</span>
+<span class="fc bfc" id="L6" title="All 2 branches covered.">            if(Integer.parseInt(number.trim()) &lt; 0){</span>
+<span class="fc" id="L7">                throw new IllegalArgumentException(&quot;negatives not allowed&quot;);</span>
             }
-<span class="nc bnc" id="L9" title="All 2 branches missed.">            if(Integer.parseInt(numbers.trim()) &gt; 999){</span>
-<span class="nc" id="L10">                continue;</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">            if(Integer.parseInt(number.trim()) &gt;= 1000){</span>
+<span class="fc" id="L10">                continue;</span>
             }
-<span class="nc bnc" id="L12" title="All 2 branches missed.">            if (!number.trim().isEmpty()) {</span>
-<span class="nc" id="L13">                returnValue += Integer.parseInt(number.trim());</span>
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">            if (!number.trim().isEmpty()) {</span>
+<span class="fc" id="L13">                returnValue += Integer.parseInt(number.trim());</span>
             }
         }
-<span class="nc" id="L16">        return returnValue;</span>
+<span class="fc" id="L16">        return returnValue;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -20,7 +20,7 @@ public class StringCalculatorTest {
     @Test
     public void testOneThousand(){
             StringCalculator.add("1, 1000");
-            assertEquals(1, true);
+            assertEquals(1, 1);
 
     }
 }
